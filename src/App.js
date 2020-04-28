@@ -1,32 +1,34 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import NavBar from "./components/NavBar/NavBar";
+import Home from "./components/Home/Home";
+import About from "./components/About/About"
+import Userlist from "./components/Home/Userlist";
 import './App.css';
 
 
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = { users: [] };
-  }
-  componentDidMount() {
-    axios.get(`https://localhost:44303/api/users/`)
-      .then(res => {
-        const users = res.data;
-        this.setState({ users });
-      })
-  }
   render() {
     return (
-      <div>
-        <ul className="userList">
-          {this.state.users.map(
-            user => <li>
-              {user.firstName + " " + user.lastName}
-              </li>)
-          }
-        </ul>
-      </div>
+      <Router>
+
+        <div>
+          <div>
+            <NavBar/>
+          </div>
+          <Switch>
+            <Route exact path='/' component={Home}></Route>
+            <Route path="/userlist" component={Userlist}></Route>
+            <Route path="/about" component={About}></Route>
+          </Switch>
+        </div>
+      </Router>
     )
   }
 }

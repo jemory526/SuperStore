@@ -1,3 +1,4 @@
+
 .pageTitle {
     color: black;
     font: 40px;
@@ -6,13 +7,16 @@
 }
 
 .pageContent {
-    display: block;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.dailyDeal {
+    align-content: center;
+}
+
 .dealDescription {
-    
     border: 5px solid slategray;
+    border-spacing: 5rem;
 }
 
 .dealDescription p {
@@ -21,7 +25,7 @@
 }
 
 .dealImage {
-    width: 35rem;
+    width: 30rem;
     height: 30rem;
     border: 5px solid slategray;
 }

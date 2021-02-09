@@ -5,11 +5,16 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import NavBar from "./components/NavBar/NavBar";
-import Home from "./components/Home/Home";
-import About from "./components/About/About"
-import Userlist from "./components/Home/Userlist";
+import Home from "./components/Pages/Home/Home";
+import Deals from "./components/Pages/Deals/Deals";
+import Catergories from "./components/Pages/Catergories/Catergories";
+import About from "./components/Pages/About/About";
+import Userlist from "./components/Pages/Userlist/Userlist";
+import NavBar from "./components/StyledComponents/NavBar/NavBar";
+import AddProduct from "./components/Pages/Products/AddProduct";
 import './App.css';
+import ProductList from './components/Pages/Products/ProductList';
+
 
 
 
@@ -17,16 +22,20 @@ class App extends Component {
   render() {
     return (
       <Router>
-
         <div>
-          <div>
-            <NavBar/>
-          </div>
+          <NavBar />
+        </div>
+        <div>
           <Switch>
             <Route exact path='/' component={Home}></Route>
+            <Route path="/catergories" component={Catergories}></Route>
             <Route path="/userlist" component={Userlist}></Route>
+            <Route path="/productlist" component={ProductList}></Route>
+            <Route path="/deals" component={Deals}></Route>
             <Route path="/about" component={About}></Route>
+            <Route path="/addProduct" component={AddProduct}></Route>
           </Switch>
+
         </div>
       </Router>
     )

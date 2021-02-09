@@ -1,0 +1,7 @@
+body {
+    position: relative;
+    background-size: 1600px;
+    background-repeat: no-repeat;
+    background-position: 25% 25%;
+    background-image: url(./images/bearPic.jpg);
+}

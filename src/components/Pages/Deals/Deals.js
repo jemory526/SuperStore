@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { Card, Container, CardDeck, Row } from 'react-bootstrap';
+import gamingPic from "../../../images/gamingPic.jpg";
+import electronicsPic from "../../../images/electronicsPic.jpg";
+import salePic from "../../../images/salePic.jpg";
+
 
 
 class Deals extends Component {
@@ -11,7 +15,7 @@ class Deals extends Component {
                     <Row>
                     <CardDeck>
                         <Card bg="secondary">
-                            <Card.Img variant="top" src="./images/gamingPic.jpg" />
+                            <Card.Img variant="top" src={gamingPic} />
                             <Card.Body>
                                 <Card.Title>Game Deals!</Card.Title>
                                 <Card.Text>
@@ -24,7 +28,7 @@ class Deals extends Component {
                             </Card.Footer>
                         </Card>
                         <Card bg="primary">
-                            <Card.Img variant="top" src="./images/electronicsPic.jpg" />
+                            <Card.Img variant="top" src={electronicsPic} />
                             <Card.Body>
                                 <Card.Title>Electronics Deals!</Card.Title>
                                 <Card.Text>
@@ -37,7 +41,7 @@ class Deals extends Component {
                             </Card.Footer>
                         </Card>
                         <Card bg="success">
-                            <Card.Img variant="top" src="./images/salePic.jpg" />
+                            <Card.Img variant="top" src={salePic} />
                             <Card.Body>
                                 <Card.Title>Clearance!</Card.Title>
                                 <Card.Text>

@@ -1,7 +1,12 @@
 body {
     position: relative;
-    background-size: 1600px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 25% 25%;
-    background-image: url(./images/bearPic.jpg);
+    background-image: url(./images/mountain.jpg);
+}
+
+html {
+    font-weight: 200;
+    font-family: "PT-Sans", sans-serif;
 }
